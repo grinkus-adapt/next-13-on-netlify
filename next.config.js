@@ -14,6 +14,7 @@ const nextConfig = {
     forceSwcTransforms: true,
     // nextScriptWorkers: true,
     scrollRestoration: true,
+    optimizePackageImports: ["@chakra-ui/react"],
   },
   images: {
     // dangerouslyAllowSVG: true,
