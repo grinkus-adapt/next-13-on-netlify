@@ -6,12 +6,16 @@ export default function Page() {
 
   console.log(`searchParams`, searchParams);
   console.log(`searchParams.get('q')`, searchParams.get('q'));
+  console.log(`searchParams.get('query')`, searchParams.get('query'));
+  console.log(`searchParams.get('location')`, searchParams.get('location'));
 
   return <div>
   <div>Careers page</div>
   <pre>{JSON.stringify(searchParams, null, 2)}</pre>
   <hr style={{margin: 50}}/>
   <pre>searchParams.get(`q`): {JSON.stringify(searchParams.get(`q`))}</pre>
+  <pre>searchParams.get(`query`): {JSON.stringify(searchParams.get(`query`))}</pre>
+  <pre>searchParams.get(`location`): {JSON.stringify(searchParams.get(`location`))}</pre>
   </div>
 }
 
