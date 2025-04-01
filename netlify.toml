@@ -1,3 +1,27 @@
+[[redirects]]
+  force = true
+  from = "/munchkin.js"
+  status = 200
+  to = "https://862-jiq-698.mktoweb.com/munchkin.js"
+
+[[redirects]]
+  force = true
+  from = "/uc.js"
+  status = 200
+  to = "https://consent.cookiebot.com/uc.js"
+
+[[redirects]]
+  force = true
+  from = "/heap.js"
+  status = 200
+  to = "https://cdn.heapanalytics.com/js/heap-4050918174.js"
+
+[[redirects]]
+  force = true
+  from = "/uwt.js"
+  status = 200
+  to = "https://static.ads-twitter.com/uwt.js"
+
 [[edge_functions]]
   function = "add-slash"
   path = "/*"
