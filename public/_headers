@@ -1,0 +1,8 @@
+/*
+# CSP
+Content-Security-Policy: form-action 'self' *.facebook.com; frame-ancestors 'self' app.contentful.com; frame-src 'self' *.workhuman.com *.googletagmanager.com *.doubleclick.net *.cdn.optimizely.com pixel.mathtag.com cdn.useproof.com *.cookiebot.com *.facebook.com cookie.havasedge.com fast.wistia.net ; base-uri 'none'; object-src 'self'; child-src 'self' *.fls.doubleclick.net; worker-src blob:; upgrade-insecure-requests; report-uri https://68cebcfc7e2f58b08b59066f1.report-uri.com/r/d/csp/enforce
+
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
