@@ -1,7 +1,21 @@
 import '@/styles/globals.css'
-import { Provider } from "@/components/ui/provider"
 import type { AppProps } from 'next/app'
+import { ChakraProvider } from '@chakra-ui/react';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Provider defaultTheme="dark" forcedTheme="dark"><Component {...pageProps} /></Provider>
+  return (
+    <ChakraProvider theme={
+      {
+        styles: {
+          global: {
+            body: {
+              bg: 'gray.50',
+            },
+          },
+        },
+      }
+    }>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
 }
