@@ -1,0 +1,105 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalEnv": [
+    "CF_SPACE_ID",
+    "CF_DELIVERY_ACCESS_TOKEN",
+    "CF_PREVIEW_ACCESS_TOKEN",
+    "CF_CMA_TOKEN",
+    "CF_ENVIRONMENT",
+    "NEXT_PUBLIC_GTM_ID",
+    "NEXT_PUBLIC_MARKETO_MUNCHKIN_ID",
+    "NEXT_PUBLIC_MARKETO_CONVERSION_FORM_ID",
+    "NEXT_PUBLIC_MARKETO_CONVERSION_FIELD_NAME",
+    "NEXT_PUBLIC_ALGOLIA_APP_ID",
+    "NEXT_PUBLIC_ALGOLIA_SEARCH_KEY",
+    "NEXT_PUBLIC_ALGOLIA_INDEX",
+    "ALGOLIA_API_KEY",
+    "INDEXABLE_CONTENT_TYPES",
+    "CONTENTFUL_PREVIEW_SECRET",
+    "BRANCH",
+    "WORKDAY_API_KEY",
+    "WORKDAY_RECRUITING_API_URL",
+    "WORKDAY_STAFFING_API_URL",
+    "WORKDAY_OAUTH_URL",
+    "WORKDAY_AUTH_USERNAME",
+    "WORKDAY_AUTH_PASSWORD",
+    "WORKDAY_REFRESH_TOKEN",
+    "BRANCH",
+    "CONTEXT",
+    "DEPLOY_PRIME_URL"
+  ],
+  "globalDependencies": [
+    ".env",
+    "BRANCH",
+    "WORKDAY_API_KEY",
+    "WORKDAY_RECRUITING_API_URL",
+    "WORKDAY_STAFFING_API_URL",
+    "WORKDAY_AUTH_USERNAME",
+    "WORKDAY_AUTH_PASSWORD",
+    "WORKDAY_REFRESH_TOKEN",
+    "WORKDAY_OAUTH_URL"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "storybook-static/**"],
+      "env": [
+        "CF_SPACE_ID",
+        "CF_DELIVERY_ACCESS_TOKEN",
+        "CF_PREVIEW_ACCESS_TOKEN",
+        "CF_CMA_TOKEN",
+        "CF_ENVIRONMENT",
+        "ISR",
+        "NEXT_PUBLIC_ROOT_URL",
+        "NEXT_PUBLIC_GTM_ID",
+        "NEXT_PUBLIC_MARKETO_MUNCHKIN_ID",
+        "NEXT_PUBLIC_MARKETO_CONVERSION_FORM_ID",
+        "NEXT_PUBLIC_MARKETO_CONVERSION_FIELD_NAME",
+        "NEXT_PUBLIC_ALGOLIA_APP_ID",
+        "NEXT_PUBLIC_ALGOLIA_SEARCH_KEY",
+        "NEXT_PUBLIC_ALGOLIA_INDEX",
+        "ALGOLIA_API_KEY",
+        "ALGOLIA_ADMIN_KEY",
+        "INDEXABLE_CONTENT_TYPES",
+        "NODE_ENV",
+        "NEXTJS_DEBUG_I18N",
+        "FONTAWESOME_NPM_AUTH_TOKEN",
+        "BRANCH",
+        "WORKDAY_API_KEY",
+        "WORKDAY_STAFFING_API_URL",
+        "WORKDAY_RECRUITING_API_URL",
+        "WORKDAY_AUTH_USERNAME",
+        "WORKDAY_AUTH_PASSWORD",
+        "WORKDAY_REFRESH_TOKEN",
+        "WORKDAY_OAUTH_URL"
+      ]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "cypress:open": {
+      "dependsOn": ["^dev"],
+      "outputs": []
+    },
+    "cypress:run": {
+      "dependsOn": ["^dev"],
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "lint-fix": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "start": {
+      "cache": false
+    },
+    "storybook": {
+      "cache": false
+    }
+  }
+}

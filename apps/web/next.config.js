@@ -20,12 +20,9 @@ const nextConfig = {
     // dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     domains: [
-      'www.workhuman.com',
-      'www.workhumanpreprod.com',
       'images.ctfassets.net',
       'netlify.app',
       'embed-ssl.wistia.com',
-      'thehive.workhuman.com',
       'cdn.prod.website-files.com',
     ],
     remotePatterns: [
@@ -43,7 +40,7 @@ const nextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "form-action 'self' *.facebook.com *.workhuman.com; frame-ancestors 'self' app.contentful.com; frame-src 'self' *.workhuman.com *.workhumanpreprod.com app.netlify.com *.googletagmanager.com *.doubleclick.net *.cdn.optimizely.com pixel.mathtag.com cdn.useproof.com *.cookiebot.com *.facebook.com *.twitter.com 862-jiq-698.mktoweb.com cookie.havasedge.com fast.wistia.net fast.wistia.com youtube.com www.youtube.com bat.bing.com  ; base-uri 'none'; object-src 'self'; child-src 'self' *.fls.doubleclick.net; upgrade-insecure-requests; report-uri https://68cebcfc7e2f58b08b59066f1.report-uri.com/r/d/csp/enforce",
+              "form-action 'self' *.facebook.com; frame-ancestors 'self' app.contentful.com; frame-src 'self' app.netlify.com *.googletagmanager.com *.doubleclick.net *.cdn.optimizely.com pixel.mathtag.com cdn.useproof.com *.cookiebot.com *.facebook.com *.twitter.com 862-jiq-698.mktoweb.com cookie.havasedge.com fast.wistia.net fast.wistia.com youtube.com www.youtube.com bat.bing.com  ; base-uri 'none'; object-src 'self'; child-src 'self' *.fls.doubleclick.net; upgrade-insecure-requests; report-uri https://68cebcfc7e2f58b08b59066f1.report-uri.com/r/d/csp/enforce",
           },
           {
             key: 'X-XSS-Protection',
